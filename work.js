@@ -1,4 +1,18 @@
+
+
+let bord=["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+let click_count=0
+
+
 document.addEventListener("DOMContentLoaded", function(){
+    let buttons=[]
+    let text1 = document.getElementById("txt");
+    let text2 = document.getElementById("txt2");
+
+    for(let i=1; i<10; i++){
+        let temp=document.getElementById(`${i}`)
+        buttons.push(temp)
+    }
     // backgroud image change
     document.getElementById("t1").addEventListener("click", function(){
         document.body.style.backgroundImage = 'url("image/space1.jpg")';
@@ -17,5 +31,37 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("m2").addEventListener("click", function(){
         document.getElementById("background-audio").pause();
     })
-    
+    //reset
+    document.getElementById("reset").addEventListener("click", function(){
+        bord=["-", "-", "-", "-", "-", "-", "-", "-", "-"]
+        buttons.forEach(x=>{
+            x.innerHTML ="-"
+            x.disabled = false
+            text1.innerHTML="Player 1's trun"
+            click_count=0
+        })
+    })
+
+    buttons.forEach(x=>{
+        x.addEventListener("click", function(){
+            if(bord[parseInt(this.id)-1]=="-"){
+                if(click_count%2==0){
+                    bord[parseInt(this.id)-1]="X"
+                    text1.innerHTML="Player 2's trun"
+                }
+                else{
+                    bord[parseInt(this.id)-1]="O"
+                    text1.innerHTML="Player 1's trun"
+                }
+                
+                const button_number = document.getElementById(this.id);
+                button_number.innerHTML = bord[parseInt(this.id)-1]
+                button_number.disabled = true; // disable the button
+
+                click_count+=1
+            }
+        })
+    })
+            
+
 })
