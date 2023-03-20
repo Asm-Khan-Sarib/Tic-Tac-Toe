@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("t3").addEventListener("click", function(){
         document.body.style.backgroundImage = 'url("image/nature2.jpg")';
     })
+
     // backgroud music
     document.getElementById("m1").addEventListener("click", function(){
         document.getElementById("background-audio").play();
@@ -16,4 +17,5 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("m2").addEventListener("click", function(){
         document.getElementById("background-audio").pause();
     })
+    
 })

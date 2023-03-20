@@ -1,10 +1,15 @@
 body {
-    background-image: url("image/space1.jpg");
+    background-image: url("image/nature2.jpg");
     background-color: rgba(2, 99, 15, 0.699);
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     font-family: sans-serif;
+}
+.main {
+    color: rgb(202, 188, 188);
+    font-family: sans-serif;
+    text-align: center;
 }
 .theme {
     color: rgb(202, 188, 188);
@@ -18,4 +23,17 @@ body {
 }
 .theme_button:hover {
     background-color: rgba(204, 221, 221, 0.39);
+}
+.bord_button {
+    background-color: #46685f;
+    color: #58FAF4;
+    border:2px solid black;
+    height: 100px;
+    width: 100px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.bord_button:hover {
+    background-color: #72a395;
   }
