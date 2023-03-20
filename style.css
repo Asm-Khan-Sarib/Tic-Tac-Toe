@@ -3,11 +3,16 @@ body {
     background-color: rgba(2, 99, 15, 0.699);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: rgb(229, 243, 166);
     font-family: sans-serif;
 }
 .main {
-    color: rgb(202, 188, 188);
+    color: rgb(229, 243, 166);
+    font-family: sans-serif;
+    text-align: center;
+}
+.message {
+    color: rgb(155, 45, 45);
     font-family: sans-serif;
     text-align: center;
 }

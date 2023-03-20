@@ -25,7 +25,7 @@ function check_bord() {
 
         for(let b=0; b<win_buttons[0].length; b++){
             let temp = document.getElementById(`${ win_buttons[0][b] + 1 }`)
-            temp.style.backgroundColor = "rgba(0, 0, 0, 0.137)"
+            temp.style.color = "red"
         }
 
         disable_buttons()
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
         buttons.forEach(x => {
             x.innerHTML = "-"
             x.disabled = false
-            x.style.backgroundColor ="rgba(0, 0, 0, 0.39)"
+            x.style.color ="rgb(252, 252, 252)"
         })
         text1.innerHTML = "Player 1's trun"
         text2.innerHTML = "."
