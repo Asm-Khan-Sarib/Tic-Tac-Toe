@@ -22,12 +22,11 @@ body {
     cursor: pointer;
 }
 .theme_button:hover {
-    background-color: rgba(204, 221, 221, 0.39);
+    background-color: rgba(242, 243, 243, 0.39);
 }
 .bord_button {
-    background-color: #46685f;
-    color: #58FAF4;
-    border:2px solid black;
+    background-color: rgba(82, 99, 79, 0.411);
+    color: rgb(202, 188, 188);
     height: 100px;
     width: 100px;
     font-size: 1.2rem;
@@ -35,5 +34,16 @@ body {
     opacity: 0.7;
 }
 .bord_button:hover {
-    background-color: #72a395;
-  }
+    background-color: rgba(242, 243, 243, 0.39);
+}
+.reset {
+    background-color: rgba(0, 0, 0, 0.438);
+    color: rgb(202, 188, 188);
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    font-size: 1.2rem;
+}
+.reset:hover {
+    background-color: rgba(242, 243, 243, 0.39);
+}
