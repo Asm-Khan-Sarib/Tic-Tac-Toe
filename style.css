@@ -1,0 +1,21 @@
+body {
+    background-image: url("image/space1.jpg");
+    background-color: rgba(2, 99, 15, 0.699);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: sans-serif;
+}
+.theme {
+    color: rgb(202, 188, 188);
+    font-family: sans-serif;
+    font-size: 0.8rem;
+}
+.theme_button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(202, 188, 188);
+    cursor: pointer;
+}
+.theme_button:hover {
+    background-color: rgba(204, 221, 221, 0.39);
+  }
