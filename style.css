@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 body {
     background-image: url("image/nature2.jpg");
     background-color: rgba(2, 99, 15, 0.699);
