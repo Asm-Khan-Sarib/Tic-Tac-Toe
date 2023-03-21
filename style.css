@@ -1,20 +1,12 @@
-html, body {
-    height: 100%;
-}
 body {
     background-image: url("image/nature2.jpg");
+    background-size: 100% 100%;
     background-color: rgba(2, 99, 15, 0.699);
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(229, 243, 166);
     font-family: sans-serif;
 }
-
-@media only screen and (max-width: 600px) {
-    body {
-      background-size: 100% auto;
-    }
-  }
 .main {
     color: rgb(229, 243, 166);
     font-family: sans-serif;
