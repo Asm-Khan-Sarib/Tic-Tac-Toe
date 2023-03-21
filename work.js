@@ -1,16 +1,18 @@
 
 function check_win(mark) {
+    //set win combinations
     const win_combinations = [[0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
     [0, 3, 6], [1, 4, 7], [2, 5, 8], // columns
     [0, 4, 8], [2, 4, 6] // diagonals
     ];
+    // matching mark with win combination
     for (let i = 0; i < win_combinations.length; i++) {
         let [a, b, c] = win_combinations[i];
         if (bord[a] === mark && bord[b] === mark && bord[c] === mark) {
-            return [win_combinations[i],mark];
+            return [win_combinations[i],mark] // return win combination and mark
         }
     }
-    return null;
+    return null
 }
 
 function disable_buttons() {
@@ -21,8 +23,8 @@ function disable_buttons() {
 
 function check_bord() {
     let win_buttons = check_win("X") || check_win("O")
+    
     if(win_buttons){
-
         for(let b=0; b<win_buttons[0].length; b++){
             let temp = document.getElementById(`${ win_buttons[0][b] + 1 }`)
             temp.style.color = "red"
@@ -33,7 +35,7 @@ function check_bord() {
         return `${win_buttons[1]} wins !!!`
     }
     else if (bord.includes("-")) {
-        return ".";
+        return "."
       }
     else{
         disable_buttons()
@@ -48,8 +50,8 @@ let click_count = 0
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = []
-    let text1 = document.getElementById("txt");
-    let text2 = document.getElementById("txt2");
+    let text1 = document.getElementById("txt")
+    let text2 = document.getElementById("txt2")
 
     for (let i = 1; i < 10; i++) {
         let temp = document.getElementById(`${i}`)
@@ -57,21 +59,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // backgroud image change
     document.getElementById("t1").addEventListener("click", function () {
-        document.body.style.backgroundImage = 'url("image/space1.jpg")';
+        document.body.style.backgroundImage = 'url("image/space1.jpg")'
     })
     document.getElementById("t2").addEventListener("click", function () {
-        document.body.style.backgroundImage = 'url("image/underwater1.jpg")';
+        document.body.style.backgroundImage = 'url("image/underwater1.jpg")'
     })
     document.getElementById("t3").addEventListener("click", function () {
-        document.body.style.backgroundImage = 'url("image/nature2.jpg")';
+        document.body.style.backgroundImage = 'url("image/nature2.jpg")'
     })
 
     // backgroud music
     document.getElementById("m1").addEventListener("click", function () {
-        document.getElementById("background-audio").play();
+        document.getElementById("background-audio").play()
     })
     document.getElementById("m2").addEventListener("click", function () {
-        document.getElementById("background-audio").pause();
+        document.getElementById("background-audio").pause()
     })
     //reset
     document.getElementById("reset").addEventListener("click", function () {
@@ -98,9 +100,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     text1.innerHTML = "Player 1's trun"
                 }
 
-                const button_number = document.getElementById(this.id);
+                const button_number = document.getElementById(this.id)
                 button_number.innerHTML = bord[parseInt(this.id) - 1]
-                button_number.disabled = true; // disable the button
+                button_number.disabled = true
 
                 click_count += 1
             }
